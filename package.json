@@ -1,0 +1,22 @@
+{
+  "name": "noble-grpc-forwarding",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "app": "tsx app.ts",
+    "generate-protos": "npm run gen:cosmos-sdk && npm run gen:noble",
+    "gen:cosmos-sdk": "buf generate buf.build/cosmos/cosmos-sdk:e7a85cef453e4b999ad9aff8714ae05f",
+    "gen:noble": "buf generate buf.build/noble-assets/forwarding:5a8609a6772d417584a9c60cd8b80881"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@bufbuild/buf": "^1.0",
+    "@bufbuild/protoc-gen-es": "^1.10.0",
+    "@connectrpc/connect-web": "^1.6.1",
+    "@connectrpc/protoc-gen-connect-es": "^1.4.0",
+    "@penumbra-zone/protobuf": "^6.1.0",
+    "tsx": "^4.19.1"
+  }
+}
